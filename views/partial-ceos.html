@@ -1,0 +1,16 @@
+<ul>
+    ${data.map(ceo => `
+        <li>${ceo.name}: ${ceo.year}</li>
+        `).join('')}
+</ul>
+
+<form action="/ceos/add" method="POST">
+    <label>CEO name
+        <input type="text" name="ceo_name" aria-placeholder="CEO Name"/>
+    </label>
+    <label>
+        Year
+        <input type="text" name="ceo_year" aria-placeholder="CEO Year"/>
+    </label>
+    <button type="submit">Add New CEO</button>
+</form>
